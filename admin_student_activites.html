@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achieva Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f8f9fd;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #1e2746;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .preferences {
+            margin-top: 50px;
+        }
+
+        .preferences a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #1e2746;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-actions img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-actions button {
+            padding: 10px;
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Student Activities */
+        .student-activities {
+            margin-top: 20px;
+        }
+
+        .activity {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .activity:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .activity-details p {
+            margin-bottom: 5px;
+        }
+
+        .activity-actions button {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #1e2746;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Achieva.</h2>
+        <nav>
+            <ul>
+                <li><a href="admin_dashboard.html">Overview</a></li>
+                <li><a href="admin_manage_activites.html">Manage Activities</a></li>
+                <li><a href="admin_student_activites.html">Student Achievements</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Student Profiles</a></li>
+                <li><a href="#">Event Planning</a></li>
+                <li><a href="#">Help & Support</a></li>
+                <li><a href="#">Permissions</a></li>
+            </ul>
+        </nav>
+        <div class="preferences">
+            <a href="#">Settings</a>
+            <a href="#">Switch Board</a>
+            <a href="#">Log out</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+            <div class="user-actions">
+                <img src="admin-profile.png" alt="Admin Profile">
+                <button>New Activity</button>
+            </div>
+        </header>
+
+        <section class="student-activities">
+            <h2>Student Activities</h2>
+            <div class="activity">
+                <div class="activity-details">
+                    <p>Student Name: <strong>John Doe</strong></p>
+                    <p>Grade: <strong>10</strong></p>
+                    <p>Activity Name: <strong>Foot Ball Tournament</strong></p>
+                    <p>Role: <strong>Participant</strong></p>
+                    <p>Award: <strong>Winner (1st)</strong></p>
+                    <p>Status: <strong>Approved</strong></p>
+                </div>
+                <div class="activity-actions">
+                    <button>View</button>
+                    <button>Edit</button>
+                    <button>Results</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="activity-details">
+                    <p>Student Name: <strong>Jane Smith</strong></p>
+                    <p>Grade: <strong>12</strong></p>
+                    <p>Activity Name: <strong>Debate Competition</strong></p>
+                    <p>Role: <strong>Leader</strong></p>
+                    <p>Award: <strong>Best Speaker</strong></p>
+                    <p>Status: <strong>Pending Approval</strong></p>
+                </div>
+                <div class="activity-actions">
+                    <button>View</button>
+                    <button>Approve</button>
+                    <button>Reject</button>
+                    <button>Result</button>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="activity-details">
+                    <p>Student Name: <strong>Alice</strong></p>
+                    <p>Grade: <strong>9</strong></p>
+                    <p>Activity Name: <strong>Cultural Fest</strong></p>
+                    <p>Role: <strong>Organizer</strong></p>
+                    <p>Award: <strong>Participation Award</strong></p>
+                    <p>Status: <strong>Rejected</strong></p>
+                </div>
+                <div class="activity-actions">
+                    <button>View</button>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

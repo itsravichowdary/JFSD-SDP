@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Achievements</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fd;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #0f1e48;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .nav-item {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            color: #0f1e48;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .nav-item img {
+            margin-right: 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            box-sizing: border-box;
+            background-color: #f8f9fd;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #071033;
+        }
+
+        .header input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Achievements Section */
+        .achievements-section {
+            margin-top: 40px;
+        }
+
+        .achievements-section h2 {
+            font-size: 24px;
+            color: #071033;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .achievement-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .achievement-card h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .achievement-card .description {
+            font-size: 14px;
+            color: #8c8c8c;
+            margin-bottom: 10px;
+        }
+
+        .achievement-card .date {
+            font-size: 12px;
+            color: #8c8c8c;
+        }
+
+        /* Recent Awards Section */
+        .recent-awards {
+            margin-top: 40px;
+        }
+
+        .recent-awards h3 {
+            font-size: 18px;
+            color: #071033;
+            margin-bottom: 20px;
+        }
+
+        .award-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .award-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .award-item span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .profile-section .name {
+            font-size: 14px;
+            color: #071033;
+        }
+
+        .profile-section .role {
+            font-size: 12px;
+            color: #8c8c8c;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Achieva.</h2>
+        <ul>
+            <li class="nav-item">
+                <a href="student_dashboard.html">
+                    <img src="./images/Overview.png" alt="Overview" width="20">
+                    Overview
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="stduents_achievements.html" class="active">
+                    <img src="./images/Achievements.png" alt="Achievements" width="20">
+                    My Achievements
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Certifications.html">
+                    <img src="./images/Certifications_Badges.png" alt="Certificates" width="20">
+                    Certificates & Badges
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="upcoming_events.html">
+                    <img src="./images/Upcoming Events.png" alt="Events" width="20">
+                    Upcoming Events
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="progress.html">
+                    <img src="./images/Progress.png" alt="Progress" width="20">
+                    Progress
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="support.html">
+                    <img src="./images/Support.png" alt="Help" width="20">
+                    Help & Support
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>My Achievements</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search achievements...">
+                <div class="profile-section">
+                    <img src="./images/profile_photo.png" alt="Profile">
+                    <div>
+                        <div class="name">Abdul Rahim</div>
+                        <div class="role">Student</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="achievements-section">
+            <h2>Your Achievements</h2>
+            
+            <div class="achievement-card">
+                <h3>Outstanding Student Award</h3>
+                <p class="description">Awarded for exceptional academic performance and leadership in 2023.</p>
+                <p class="date">Awarded: May 2023</p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>Best Project Presentation</h3>
+                <p class="description">Awarded for the best project presentation in the university's innovation week.</p>
+                <p class="date">Awarded: March 2023</p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>Community Leadership Award</h3>
+                <p class="description">Recognized for exceptional leadership in community service projects.</p>
+                <p class="date">Awarded: January 2023</p>
+            </div>
+        </div>
+
+        <!-- Recent Awards Section -->
+        <div class="recent-awards">
+            <h3>Recent Awards</h3>
+            <ul class="award-list">
+                <li class="award-item">
+                    <span>Excellence in Coding</span>
+                    <span>Hackathon 2023</span>
+                    <span>July 2023</span>
+                </li>
+                <li class="award-item">
+                    <span>Top Innovator</span>
+                    <span>Tech Expo 2023</span>
+                    <span>April 2023</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

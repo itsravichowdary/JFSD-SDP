@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Achieva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: 'Mulish', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fd;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            width: 900px;
+            height: 500px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Left side (Image section) */
+        .left-section {
+            width: 50%;
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Right side (Login section) */
+        .right-section {
+            width: 50%;
+            background-color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-section h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0f1e48;
+        }
+
+        .right-section h1 span {
+            color: #071033;
+        }
+
+        .input-field {
+            margin-top: 20px;
+        }
+
+        .input-field label {
+            font-size: 14px;
+            color: #4c4c4c;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 15px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #dcdcdc;
+            font-size: 16px;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+
+        .input-field input[type="checkbox"] {
+            width: auto;
+            margin-top: 10px;
+        }
+
+        .remember-me {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .remember-me label {
+            font-size: 14px;
+            color: #4c4c4c;
+        }
+
+        .remember-me a {
+            color: #7d66ff;
+            text-decoration: none;
+        }
+
+        .login-btn {
+            background-color: #0f1e48;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .signup {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .signup a {
+            color: #7d66ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section (Image) -->
+        <div class="left-section">
+            <img src="./images/image-removebg-preview.png" alt="Login Illustration">
+        </div>
+
+        <!-- Right Section (Form) -->
+        <div class="right-section">
+            <h1>Welcome to <span>Achieva</span></h1>
+            <!-- Update the form's action to point to admin_dashboard.html -->
+            <form action="admin_dashboard.html" method="get">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="example@gmail.com">
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" value="************">
+                </div>
+                <div class="remember-me">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
